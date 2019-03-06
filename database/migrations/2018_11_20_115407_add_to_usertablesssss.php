@@ -15,7 +15,7 @@ class AddToUsertablesssss extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('phone_no');
-            $table->string('gender');
+
         });
     }
 
@@ -28,7 +28,7 @@ class AddToUsertablesssss extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('phone_no');
-            $table->dropColumn('gender');
+
         });
     }
 }

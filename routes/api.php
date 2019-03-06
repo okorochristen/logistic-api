@@ -16,9 +16,9 @@ use Illuminate\Http\Request;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
    // return $request->user();
 //});
-Route::resource('/users', 'ApisssController');
-Route::post('/login', 'ApisssController@login');
-Route::post('/posts/create','ApisssController@store');
-Route::resource('/posts/edit','ApisssController@edit');
-Route::put('/posts/edit', 'ApisssController@update');
+Route::get('/users', 'UserController@index');
+Route::post('/login', 'UserController@login');
+Route::post('/register','UserController@store');
+Route::post('/update/{id}', 'UserController@update');
+Route::delete('/delete/{id}', 'UserController@destroy');
 
